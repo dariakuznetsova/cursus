@@ -1,0 +1,690 @@
+
+extends includes/layout
+
+block title
+    title Профиль перевозчика
+
+block content
+    .main-container.search-container
+
+        .search__wrapper_top
+            .page-title
+                h1 Личный кабинет
+                a(href='javascript:;').page-title-link.j-page-title-link Личный кабинет
+                    .icon-wrapper
+                        +icon("triangle",10,10)
+
+        .search__wrapper_content
+            aside.search-aside.search-aside_personal
+                form.search-form
+                    ul.search-form-list
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Грузы
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='javascript:;').j-personal-aside-inner-link Активные(1)
+                                    li
+                                        a(href='javascript:;').j-personal-aside-link Забронированные
+                                    li
+                                        a(href='javascript:;').j-personal-aside-link Подготовленные
+                                    li
+                                        a(href='javascript:;').j-personal-aside-link Отправленные
+                                    li
+                                        a(href='javascript:;').j-personal-aside-link Доставленные
+                                    li
+                                        a(href='javascript:;').j-personal-aside-link В архиве
+                                    li
+                                        a(href='javascript:;').j-personal-aside-link Удалены
+
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Профиль
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link.j-find-request История транзакции
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-personal-aside-link Баланс
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-personal-aside-link Сообщения
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-personal-aside-link Лента
+
+
+            .search-content
+                ul.personal__content-list
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои предложения
+                        .subtitle Активные (1)
+                        .table-wrap
+                            table.search-content__table.search__table_top
+                                tr
+                                    td.cargo Груз
+                                    td.price Цена
+                                    td.send Отправка
+                                    td.recieve Доставка
+                                    td.distance Расстояние
+                                    td.time Время публикации
+                            table.search-content__table.search__table_main
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои предложения
+                        .subtitle Просроченные
+                        .table-wrap
+                            table.search-content__table.search__table_top
+                                tr
+                                    td.cargo Груз
+                                    td.price Цена
+                                    td.send Отправка
+                                    td.recieve Доставка
+                                    td.distance Расстояние
+                                    td.time Время публикации
+                            table.search-content__table.search__table_main
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои предложения
+                        .subtitle Получен отказ
+                        .table-wrap
+                            table.search-content__table.search__table_top
+                                tr
+                                    td.cargo Груз
+                                    td.price Цена
+                                    td.send Отправка
+                                    td.recieve Доставка
+                                    td.distance Расстояние
+                                    td.time Время публикации
+                            table.search-content__table.search__table_main
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои предложения
+                        .subtitle Отмененные
+                        .table-wrap
+                            table.search-content__table.search__table_top
+                                tr
+                                    td.cargo Груз
+                                    td.price Цена
+                                    td.send Отправка
+                                    td.recieve Доставка
+                                    td.distance Расстояние
+                                    td.time Время публикации
+                            table.search-content__table.search__table_main
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои перевозки
+                        .table-wrap
+                            table.search-content__table.search__table_top
+                                tr
+                                    td.cargo Груз
+                                    td.price Цена
+                                    td.send Отправка
+                                    td.recieve Доставка
+                                    td.distance Расстояние
+                                    td.time Время публикации
+                            table.search-content__table.search__table_main
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои перевозки
+                        .subtitle Принятые
+                        .table-wrap
+                            table.search-content__table.search__table_top
+                                tr
+                                    td.cargo Груз
+                                    td.price Цена
+                                    td.send Отправка
+                                    td.recieve Доставка
+                                    td.distance Расстояние
+                                    td.time Время публикации
+                            table.search-content__table.search__table_main
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои перевозки
+                        .subtitle Погруженные
+                        .table-wrap
+                            table.search-content__table.search__table_top
+                                tr
+                                    td.cargo Груз
+                                    td.price Цена
+                                    td.send Отправка
+                                    td.recieve Доставка
+                                    td.distance Расстояние
+                                    td.time Время публикации
+                            table.search-content__table.search__table_main
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои перевозки
+                        .subtitle Доставленные
+                        .table-wrap
+                            table.search-content__table.search__table_top
+                                tr
+                                    td.cargo Груз
+                                    td.price Цена
+                                    td.send Отправка
+                                    td.recieve Доставка
+                                    td.distance Расстояние
+                                    td.time Время публикации
+                            table.search-content__table.search__table_main
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои перевозки
+                        .subtitle Отмененные
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои перевозки
+                        .subtitle В архиве
+                        .table-wrap
+                            table.search-content__table.search__table_top
+                                tr
+                                    td.cargo Груз
+                                    td.price Цена
+                                    td.send Отправка
+                                    td.recieve Доставка
+                                    td.distance Расстояние
+                                    td.time Время публикации
+                            table.search-content__table.search__table_main
+                                tr
+                                    td.cargo
+                                        .td-wrapper
+                                            .td-img
+                                                img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                            .td-info.td-info_cargo
+                                                .td-info__title
+                                                    a(href='item.html').td-info__link
+                                                        p Коробки с одеждой, плюс манекены для магазина
+                                                .td-info__text
+                                                    p Текстиль
+                                                    p 30 кг
+                                    td.price 15 000 руб.
+                                    td.send
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Москва,
+                                                        br
+                                                        | ул. Гагарина, д.9
+                                                .td-info__text
+                                                    p 22.06.2016
+                                                    p 12:00
+
+                                    td.recieve
+                                        .td-wrapper
+                                            .td-info
+                                                .td-info__title
+                                                    p г. Днепропетровск,
+                                                        br
+                                                        | ул. Краснознаменная, д.10
+                                                .td-info__text
+                                                    p 26.06.2016
+                                                    p 22:00
+                                    td.distance 1200 км
+                                    td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Найти заявки
+                        .subtitle Отслеживаемые
+                            .table-wrap
+                                table.search-content__table.search__table_top
+                                    tr
+                                        td.cargo Груз
+                                        td.price Цена
+                                        td.send Отправка
+                                        td.recieve Доставка
+                                        td.distance Расстояние
+                                        td.time Время публикации
+                                table.search-content__table.search__table_main
+                                    tr
+                                        td.cargo
+                                            .td-wrapper
+                                                .td-img
+                                                    img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                                .td-info.td-info_cargo
+                                                    .td-info__title
+                                                        a(href='item.html').td-info__link
+                                                            p Коробки с одеждой, плюс манекены для магазина
+                                                    .td-info__text
+                                                        p Текстиль
+                                                        p 30 кг
+                                        td.price 15 000 руб.
+                                        td.send
+                                            .td-wrapper
+                                                .td-info
+                                                    .td-info__title
+                                                        p г. Москва,
+                                                            br
+                                                            | ул. Гагарина, д.9
+                                                    .td-info__text
+                                                        p 22.06.2016
+                                                        p 12:00
+
+                                        td.recieve
+                                            .td-wrapper
+                                                .td-info
+                                                    .td-info__title
+                                                        p г. Днепропетровск,
+                                                            br
+                                                            | ул. Краснознаменная, д.10
+                                                    .td-info__text
+                                                        p 26.06.2016
+                                                        p 22:00
+                                        td.distance 1200 км
+                                        td.time 30 мин. назад
+
+                    li.personal__content-item.j-personal-content-item
+                        .title Мой календарь
+                    li.personal__content-item.j-personal-content-item
+                        .title Найти попутный груз
+                        svg(version='1.1' xmlns='http://www.w3.org/2000/svg').map-svg-filter
+                            fliter(type='desaturate')#grayscale
+                                feColorMatrix(type='matrix' values='0.343 0.669 0.119 0 0 0.249 0.626 0.130 0 0 0.172 0.334 0.111 0 0 0     0     0     1 0')
+                        .map
+                            iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15990.794843219408!2d30.352946349999996!3d59.93464185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1472128314149" width='100%' height='300px' frameborder="0" style="border:0" allowfullscreen)
+                    li.personal__content-item.j-personal-content-item
+                        .title Мой профиль
+                    li.personal__content-item.j-personal-content-item
+                        .title История транзакций
+                    li.personal__content-item.j-personal-content-item
+                        .title Мой баланс
+                    li.personal__content-item.j-personal-content-item
+                        .title Мои сообщения
+                    li.personal__content-item.j-personal-content-item
+                        .title Моя лента
+

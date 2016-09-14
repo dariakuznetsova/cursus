@@ -1,0 +1,167 @@
+
+extends includes/layout
+
+block title
+    title Мои перевозки
+
+block content
+    .main-container.search-container
+
+        .search__wrapper_top
+            .page-title
+                h1 Личный кабинет
+                a(href='javascript:;').page-title-link.j-page-title-link Личный кабинет
+                    .icon-wrapper
+                        +icon("triangle",10,10)
+
+        .search__wrapper_content
+            aside.search-aside.search-aside_personal
+                form.search-form
+                    ul.search-form-list
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Предложения
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='personal-customer__offers-active.html') Активные (1)
+                                    li
+                                        a(href='personal-customer__offers-expired.html') Просроченные
+                                    li
+                                        a(href='personal-customer__offers-refused.html') Получен отказ
+                                    li
+                                        a(href='personal-customer__offers-cancelled.html') Отмененные
+
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Мои перевозки
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='personal-customer__transportation-all.html') Все
+                                    li
+                                        a(href='personal-customer__transportation-accepted.html') Принятые
+                                    li
+                                        a(href='personal-customer__transportation-embarked.html') Погруженные
+                                    li
+                                        a(href='personal-customer__transportation-delivered.html') Доставленные
+                                    li
+                                        a(href='personal-customer__transportation-cancelled.html') Отмененные
+                                    li
+                                        a(href='personal-customer__transportation-archived.html') В архиве
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link.j-find-request Найти заявки
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='cargo-search.html') Найти груз
+                                    li
+                                        a(href='personal-customer__followed-requests.html') Отслеживаемые
+
+                        li.search-form__item
+                            a(href='personal-customer__calendar.html').search-form__link Календарь
+
+                        li.search-form__item
+                            a(href='personal-customer__following-cargo.html').search-form__link Попутный груз
+
+                        li.search-form__item
+                            a(href='personal-customer__profile.html').search-form__link Профиль
+
+                        li.search-form__item
+                            a(href='personal-customer__transaction-history.html').search-form__link История транзакций
+
+                        li.search-form__item
+                            a(href='personal-customer__balance.html').search-form__link Баланс
+
+                        li.search-form__item
+                            a(href='personal-customer__messages.html').search-form__link Сообщения
+
+                        li.search-form__item
+                            a(href='personal-customer__news.html').search-form__link Лента
+
+
+            .search-content
+                .personal__content-list
+                    .title Мои перевозки
+                    .subtitle Принятые
+                    .table-wrap
+                        table.search-content__table.search__table_main
+                            tr
+                                td.cargo Груз
+                                td.price Цена
+                                td.send Отправка
+                                td.recieve Доставка
+                                td.distance Расстояние
+                            tr
+                                td.cargo
+                                    .td-wrapper
+                                        .td-img
+                                            img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                        .td-info.td-info_cargo
+                                            .td-info__title
+                                                a(href='item.html').td-info__link
+                                                    p Коробки с одеждой, плюс манекены для магазина
+                                            .td-info__text
+                                                p Текстиль
+                                                p 30 кг
+                                td.price 15 000 руб.
+                                td.send
+                                    .td-wrapper
+                                        .td-info
+                                            .td-info__title
+                                                p г. Москва,
+                                                    br
+                                                    | ул. Гагарина, д.9
+                                            .td-info__text
+                                                p 22.06.2016
+                                                p 12:00
+
+                                td.recieve
+                                    .td-wrapper
+                                        .td-info
+                                            .td-info__title
+                                                p г. Днепропетровск,
+                                                    br
+                                                    | ул. Краснознаменная, д.10
+                                            .td-info__text
+                                                p 26.06.2016
+                                                p 22:00
+                                td.distance 1200 км
+                            tr
+                                td.cargo
+                                    .td-wrapper
+                                        .td-img
+                                            img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                        .td-info.td-info_cargo
+                                            .td-info__title
+                                                a(href='item.html').td-info__link
+                                                    p Коробки с одеждой, плюс манекены для магазина
+                                            .td-info__text
+                                                p Текстиль
+                                                p 30 кг
+                                td.price 15 000 руб.
+                                td.send
+                                    .td-wrapper
+                                        .td-info
+                                            .td-info__title
+                                                p г. Москва,
+                                                    br
+                                                    | ул. Гагарина, д.9
+                                            .td-info__text
+                                                p 22.06.2016
+                                                p 12:00
+
+                                td.recieve
+                                    .td-wrapper
+                                        .td-info
+                                            .td-info__title
+                                                p г. Днепропетровск,
+                                                    br
+                                                    | ул. Краснознаменная, д.10
+                                            .td-info__text
+                                                p 26.06.2016
+                                                p 22:00
+                                td.distance 1200 км

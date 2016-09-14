@@ -1,0 +1,295 @@
+extends includes/layout
+
+block title
+    title Заявка
+
+block content
+    .main-container.request.collaboration
+        ul.registration-counter.registration__step_request
+            li
+                a(href='javascript:;').registration__item_active
+                    span Выбор груза
+            li
+                a(href='javascript:;')
+                    span Информация о заявке
+            li
+                a(href='javascript:;')
+                    span Отправка и доставка
+            li
+                a(href='javascript:;')
+                    span Личная информация
+            li
+                a(href='javascript:;')
+                    span Размещение заказа
+
+        ul.registration-list.registration-list_request
+            form(action='demo.json').registration-form#requestForm
+                li.registration__step.send-and-deliver
+                    .registration-inputs-wrapper
+                        .registration-form__title Выбор груза
+                        .registration-wrapper
+                            .registration-form__select
+                                select(name='selectCargo')
+                                    option Мебель
+                                    option Строительные материалы
+                                    option Животных
+                                    option Другое
+                        .request__buttons
+                            //a(href='javascript:;').back-link Назад
+                            button(type='submit') Продолжить
+                li.registration__step
+                    .registration-inputs-wrapper.request__wrapper-width
+                        .request__width300
+                            .registration-form__title Информация о заявке
+                            input(type='text' name='name' placeholder='Название заявки')
+                        .j-request__item-description
+                        .request__width300
+                            .request__item-pictures
+                                .title Добавить изображения
+                                label
+                                    input(type='file' name='' accept="image/jpeg,image/png").checked_elem
+                                    .checkbox-fake
+                                        +icon('add',12,12)
+                                        +icon('checked',25,25)
+                                label
+                                    input(type='file' name='' accept="image/jpeg,image/png").checked_elem
+                                    .checkbox-fake
+                                        +icon('add',12,12)
+                                        +icon('checked',25,25)
+                                label
+                                    input(type='file' name='' accept="image/jpeg,image/png").checked_elem
+                                    .checkbox-fake
+                                        +icon('add',12,12)
+                                        +icon('checked',25,25)
+                                label
+                                    input(type='file' name='' accept="image/jpeg,image/png").checked_elem
+                                    .checkbox-fake
+                                        +icon('add',12,12)
+                                        +icon('checked',25,25)
+                                label
+                                    input(type='file' name='' accept="image/jpeg,image/png").checked_elem
+                                    .checkbox-fake
+                                        +icon('add',12,12)
+                                        +icon('checked',25,25)
+                            textarea(name='details' placeholder='Детали заказа').request__item-textarea.request-details
+
+                            .request__buttons
+                                a(href='javascript:;').back-link Назад
+                                button(type='submit') Продолжить
+
+                li.registration__step.send-and-deliver
+                    .registration-inputs-wrapper
+                        .registration-form__title Отправка и доставка
+                        .registration-wrapper
+                            .registration-form__select
+                                p Место отправки:
+                                select(name='selectSendPlace')
+                                    option Квартира/Дом
+                                    option Порт
+                                    option Склад
+                            fieldset.request__place-fieldset
+                                +icon('location',20,30)
+                                span Адрес места отправки
+                                input(type='text' name='sendPlace' placeholder='Введите адрес')
+                            fieldset.request__place-fieldset.send-deliver__fieldset
+                                span Время отправки
+                                input(type='text' name='sendTime' placeholder='Введите время')
+                                .registration-form__select
+                                    select(data-placeholder-option="true" name='selectSendTime')
+                                        option(value='null') Точная дата
+                                        option До
+                                        option Между
+                                        option После
+                            .registration-form__select
+                                p Место доставки:
+                                select(name='selectDeliverPlace')
+                                    option Квартира/Дом
+                                    option Порт
+                                    option Склад
+                            fieldset.request__place-fieldset
+                                +icon('location',20,30)
+                                span Адрес места доставки
+                                input(type='text' name='deliverPlace' placeholder='Введите адрес')
+                            fieldset.request__place-fieldset.send-deliver__fieldset
+                                span Время отправки
+                                input(type='text' name='deliverTime' placeholder='Введите время')
+                                .registration-form__select
+                                    select(data-placeholder-option="true" name='selectDeliverTime')
+                                        option(value='null') Точная дата
+                                        option До
+                                        option Между
+                                        option После
+
+                            .request__buttons
+                                a(href='javascript:;').back-link Назад
+                                button(type='submit') Продолжить
+
+                li.registration__step
+                    .registration-inputs-wrapper.registration-inputs-wrapper_request
+                        .registration-form__title Личная информация
+                        .registration-socials
+                            p Зарегистрироваться с помощью социальных сетей
+                            ul.registration-socials-list
+                                li.registration-socials__item
+                                    a(href='#')
+                                        img(src='../local/templates/main/img/vk.svg' alt='вконтакте')
+                                    span Вконтакте
+                                li.registration-socials__item
+                                    a(href='#')
+                                        img(src='../local/templates/main/img/fb.svg' alt='фэйсбук')
+                                    span Фэйсбук
+                                li.registration-socials__item
+                                    a(href='#')
+                                        img(src='../local/templates/main/img/ok.svg' alt='одноклассники')
+                                    span Одноклассники
+                        fieldset.request__fieldset_width
+                            input(type='text' name='userName' placeholder='Имя')
+                            input(type='text' name='userSurname' placeholder='Фамилия')
+                            input(type='text' name='email' placeholder='E-mail')
+                            input(type='text' name='password' placeholder='Пароль')
+                            button(type='submit' name='joinButton').request__join-button Присоединиться
+                            .request__buttons
+                                a(href='javascript:;').back-link Назад
+                                button(type='submit') Продолжить
+
+                li.registration__step
+                    .success-text
+                        +icon('thumbs-up',45,50)
+                        .registration-form__title.registration__title-last Спасибо!
+                        p Текст о том, что делать дальше. Текст о том, что делать дальше. Текст о том, что делать дальше. Текст о том, что делать дальше.
+                        a(href='#').save-request-link Сохранить на потом
+                    ul.request__other-options
+                        li
+                           p.other-options__title Получить цену
+                           p.other-options__info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                           a(href='#').other-options__link Запросить предложения
+                        li
+                            p.other-options__title Указать цену
+                            a(href='#').to-calculator-link Калькулятор рекомендованной цены
+                            .fee-calculator
+                                fieldset.price-without-fee
+                                    p Введите цену
+                                    input(type='text' placeholder='0' value='')
+                                fieldset.price-with-fee
+                                    p С комиссией сайта
+                                    input(type='text' value='' placeholder='0')
+                            a(href='#').other-options__link Разместить
+                        li
+                            p.other-options__title Срочная перевозка
+                            p.other-options__info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+                            a(href='#').other-options__link Заказать
+
+
+
+                script(src='http://cdn.ractivejs.org/latest/ractive.min.js')
+                script(id='itemCounter' type='text/ractive').
+
+                    <div class='wrap-for-counter'>
+                        <p>Количество наименований</p>
+                        <div class='search__counter-wrapper'>
+                            <input type='text' value="{{cnt}}" class='search-form__input-counter j-items-quantity'/>
+                            <a href='javascript:;' on-click="inccnt" class='up'><img src='../local/templates/main/img/triangle-blue.svg'/></a>
+                            <a href='javascript:;' on-click="deccnt" class='down'><img src='../local/templates/main/img/triangle-blue.svg'/></a>
+                        </div>
+                    </div>
+
+                    <div class='request__item-description j-request__item'>
+
+                        {{#each forms:i}}
+                            <div class='item-wrapper'>
+                            <title class='item-title'>Параметры наименования №{{i+1}}</title>
+                                    <fieldset class='request__item-params'>
+                                        <input type='text' placeholder='Длина' value="{{this.length}}" name='length' />
+                                        <input type='text' placeholder='Ширина' value="{{this.width}}" name='width'/>
+                                    </fieldset>
+                                    <fieldset class='request__item-params'>
+                                        <input type='text' placeholder='Высота' value="{{this.height}}" name='height'/>
+                                        <input type='text' placeholder='Вес' value="{{this.weight}}" name='weight' />
+                                    </fieldset>
+                                    <fieldset>
+                                        <textarea name='message' placeholder='Описание наименования' class='request__item-textarea' value={{this.description}}></textarea>
+                                        <div class='wrap-for-counter'>
+                                            <p>Количество</p>
+                                            <div class='search__counter-wrapper second-counter'>
+                                                <input type='text' value='{{this.quant}}' class='search-form__input-counter' />
+                                                <a href='javascript:;' class='inner-less j-less' on-click='dec'><img src='../local/templates/main/img/triangle-blue.svg'/></a>
+                                                <a href='javascript:;' class='inner-more j-more' on-click="inc"><img src='../local/templates/main/img/triangle-blue.svg'/></a>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class='request__item-labels j-label-block'>
+                                        <label>
+                                            <input type='checkbox' name='goods[]' class='checked_elem' on-click="svg"/>
+                                            <div class='checkbox-fake'>
+                                                <img src='../local/templates/main/img/shape.svg'/>
+                                            </div>
+                                            <p>С поддоном</p>
+                                        </label>
+                                        <label>
+                                            <input type='checkbox' name='goods[]' class='checked_elem' on-click="svg"/>
+                                            <div class='checkbox-fake'>
+                                                <img src='../local/templates/main/img/shape.svg'/>
+                                            </div>
+                                            <p>Упаковано</p>
+                                        </label>
+                                        <label>
+                                            <input type='checkbox' name='goods[]' class='checked_elem' on-click="svg"/>
+                                            <div class='checkbox-fake'>
+                                                <img src='../local/templates/main/img/shape.svg'/>
+                                            </div>
+                                            <p>Можно ставить друг на друга</p>
+                                        </label>
+                                    </fieldset>
+                            </div>
+                        {{/each}}
+                    </div>
+
+
+                script.
+                    var ractive = new Ractive ({
+                            el: ".j-request__item-description",
+                            template: "#itemCounter",
+                            data: { cnt: 1,
+                                    forms: [
+                                        {
+                                            length: '',
+                                            width:'',
+                                            height: '',
+                                            weight: '',
+                                            description: ''
+                                        }
+                                    ]
+                                }
+                        });
+                    ractive.on({
+                      inccnt: function () {
+                        ractive.set('cnt',ractive.get('cnt')+1);
+                      },
+                      deccnt: function () {
+                        var c = ractive.get('cnt');
+                        if ((c - 1)>0) {
+                            ractive.set('cnt',c-1);
+                        }
+                      },
+                      inc: function(event){
+                       ractive.set(event.keypath+'.quant',ractive.get(event.keypath+'.quant')-1);
+                      },
+                      dec: function(event){
+                         ractive.set(event.keypath+'.quant',ractive.get(event.keypath+'.quant')+1);
+                      },
+                      svg: function(event) {
+
+                      }
+
+                    });
+                    ractive.observe('cnt',function(newVal,oldVal,str) {
+                        if (newVal>oldVal) {
+                            var c = newVal-oldVal;
+                            for (var i = 0; i<c; i++)
+                                ractive.push('forms',{});
+                        } else if (oldVal>newVal) {
+                            ractive.pop('forms');
+                        }
+                    });
+
+

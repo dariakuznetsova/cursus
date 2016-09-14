@@ -1,0 +1,133 @@
+extends includes/layout
+
+block title
+    title Регистрация
+
+block content
+    .main-container
+        ul.registration-counter
+            li
+                a(href='javascript:;').registration__item_active
+                    span 1
+            li
+                a(href='javascript:;')
+                    span 2
+            li
+                a(href='javascript:;')
+                    span 3
+            li
+                a(href='javascript:;')
+                    span 4
+
+        ul.registration-list
+            form(action='demo.json').registration-form#registration-form
+                li.registration__step
+                    .registration-inputs-wrapper
+                        .registration-form__title Регистрация
+                        input(type='text' name='name' placeholder='Имя')
+                        input(type='text' name='surname' placeholder='Фамилия')
+                        input(type='email' name='email' placeholder='Email')
+                        input(type='text' name='tel' placeholder='Телефон')
+                        button(type='submit') Продолжить
+                    .registration-socials
+                        p Вы можете зарегистрироваться с помощью вашего аккаунта в социальных сетях.
+                        ul.registration-socials-list
+                            li.registration-socials__item
+                                a(href='#')
+                                    img(src='../local/templates/main/img/vk.svg' alt='вконтакте')
+                                span Вконтакте
+                            li.registration-socials__item
+                                a(href='#')
+                                    img(src='../local/templates/main/img/fb.svg' alt='фэйсбук')
+                                span Фэйсбук
+                            li.registration-socials__item
+                                a(href='#')
+                                    img(src='../local/templates/main/img/ok.svg' alt='одноклассники')
+                                span Одноклассники
+
+                li.registration__step
+                    .registration-inputs-wrapper
+                        .registration-form__title Регистрация
+                        input(type='text' name='organization' placeholder='Название организации')
+                        input(type='text' name='country' placeholder='Страна')
+                        input(type='text' name='city'  placeholder='Город')
+                        input(type='text' name='address' placeholder='Адрес')
+                        button(type='submit') Продолжить
+
+                li.registration__step
+                    .registration-inputs-wrapper
+                        .registration-form__title Регистрация
+                        .registration-form__select
+                            p Выберите вид транспорта:
+                            select(name='selectTransport')
+                                option Грузовик
+                                option Газель
+                                option Легковой автомобиль
+                                option Лошадь
+                                option Лодка
+                        .registration-form__filter
+                            p Выберите что готовы перевозить:
+                            .registration-filter-wrap
+                                .registration-filter__block.j-label-block
+                                    label
+                                        input(type='checkbox' name='goods[]').checked_elem
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                        p Мебель
+                                    label
+                                        input(type='checkbox' name='goods[]').checked_elem
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                        p Продукты
+                                    label
+                                        input(type='checkbox' name='goods[]').checked_elem
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                        p Песок
+                                    label
+                                        input(type='checkbox' name='goods[]').checked_elem
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                        p Животных
+
+                                .registration-filter__block.j-label-block
+                                    label
+                                        input(type='checkbox' name='goods[]').checked_elem
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                        p Стекло
+                                    label
+                                        input(type='checkbox' name='goods[]').checked_elem
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                        p Щебень
+                                    label
+                                        input(type='checkbox' name='goods[]').checked_elem
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                        p Бетон
+                                    label
+                                        input(type='checkbox' name='goods[]').checked_elem.input__other-options
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                        p Другое
+                            input(type='text' name='otherOptions'  placeholder='Введите свой вариант').registration__filter-input.j-registration-input
+                            button(type='submit') Продолжить
+
+                li.registration__step
+                    .registration-inputs-wrapper
+                        .registration-form__title Регистрация
+                        input(type='text' name='login' placeholder='Ваш Логин')
+                        input(type='text' name='password' placeholder='Пароль')
+                        input(type='text' name='passwordRepeat' placeholder='Повторите пароль')
+                        button(type='submit') Продолжить
+
+                li.registration__step.registration__last-step
+                    +icon('thumbs-up',45,50)
+                    .registration-form__title.registration__title-last Спасибо, вы зарегистрировались как перевозчик!
+                    p Заполните как можно подробнее свой профиль, для получения максимального количества заказов.
+                    .registration-inputs-wrapper
+                        button(type='submit') Продолжить
+
+
+

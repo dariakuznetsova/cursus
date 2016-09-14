@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="21px" height="33px" viewBox="0 0 21 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>location pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Guideline" transform="translate(-829.000000, -439.000000)" fill="#272E40">
+            <g id="location-pin" transform="translate(829.000000, 439.000000)">
+                <path d="M10.5,0 C4.6998,0 0,4.60018762 0,10.2983114 C0,20.1508443 10.5,33 10.5,33 C10.5,33 21,20.1487805 21,10.2983114 C21,4.60225141 16.3002,0 10.5,0 L10.5,0 Z M10.1260419,15.75 C7.0171328,15.75 4.5,13.23125 4.5,10.125 C4.5,7.01875 7.0171328,4.5 10.1260419,4.5 C13.2307835,4.5 15.75,7.01875 15.75,10.125 C15.75,13.23125 13.2307835,15.75 10.1260419,15.75 L10.1260419,15.75 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

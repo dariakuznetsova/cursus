@@ -1,0 +1,258 @@
+extends includes/layout
+
+block title
+    title Профиль перевозчика
+
+block content
+    .main-container.item
+
+        .item-block.ferryman-profile
+            .item-block__left.ferrymen-block
+                .title_underline Перевозчик
+                ul.item-block__list.ferryman__main-info
+                    li
+                        .ferryman-info
+                            .ferryman__img.ferryman__img_main
+                                img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                            .ferryman__about.ferryman__about_main
+                                p Алексеев Алексей
+                                ul.ferryman__starslist
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                    li
+                        .ferryman-info__item
+                            p.title Информация о пользователе:
+                            p Зарегистрирован:
+                                span 11.11.2015
+                    li
+                        .ferryman-info__item
+                            p.title Заказов:
+                            p Активных (3)
+                            p Последний:
+                                span 07.07.2016
+                    li
+                        .ferryman-info__item
+                            p.title Отзывы:
+                            p Положительные (3)
+                            p Отрицательные (3)
+                    li
+                        .ferryman-info__item
+                            p.title Категории грузов:
+                            p Мебель, Одежда, Продукты, Животные, Хрупкие изделия, Металл, Древесина
+                    li
+                        .ferryman-info__item
+                            p.title Транспорт:
+                            p Грузовик, Легковой автомобиль, Погрузчик
+
+
+            .item-block__right
+                .title_underline Отзывы
+                .user__ref-buttons
+                    a(href='javascript:;').active.j-ref-link.j-good-ref-link Положительные
+                    a(href='javascript:;').j-ref-link.j-bad-ref-link Отрицательные
+                .refs-wrapper
+                    ul.item-block__list.user__good-refs.j-good-ref-list
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='#').ferryman__profile-link
+                                        p Иванов Иван
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p 14.06.2016
+                                P Заказ:
+                                    span Перевозка мебели
+                            .ferryman-ref
+                                p Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='#').ferryman__profile-link
+                                        p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p 14.06.2016
+                                P Заказ:
+                                    span Срочно перевезти молочную продукцию
+                            .ferryman-ref
+                                p Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='#').ferryman__profile-link
+                                        p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p 14.06.2016
+                                P Заказ:
+                                    span Перевозка мебели
+                            .ferryman-ref
+                                p Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='#').ferryman__profile-link
+                                        p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p 14.06.2016
+                                P Заказ:
+                                    span Срочно перевезти молочную продукцию
+                            .ferryman-ref
+                                p Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+
+                    ul.item-block__list.user__bad-refs.j-bad-ref-list
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='#').ferryman__profile-link
+                                        p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p 14.06.2016
+                                P Заказ:
+                                    span Перевозка мебели
+                            .ferryman-ref
+                                p Заказом недоволен, все очень плохо.
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='#').ferryman__profile-link
+                                        p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p 14.06.2016
+                                P Заказ:
+                                    span Срочно перевезти молочную продукцию
+                            .ferryman-ref
+                                p Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='#').ferryman__profile-link
+                                        p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p 14.06.2016
+                                P Заказ:
+                                    span Срочно перевезти молочную продукцию
+                            .ferryman-ref
+                                p Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='#').ferryman__profile-link
+                                        p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p 14.06.2016
+                                P Заказ:
+                                    span Перевозка мебели
+                            .ferryman-ref
+                                p Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                    .all-references
+                        a(href='javascript:;').all-refs-link.j-all-refs-link Все отзывы

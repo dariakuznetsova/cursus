@@ -1,0 +1,31 @@
+{
+    "server_path": "./httpdocs/",
+    "build_path": "./httpdocs/html/",
+    "bitrix_path": "./httpdocs/local/",
+    "src_path": "./src/",
+    "nm": "../../node_modules/",
+    "enable_browser_sync": true,
+    "pname": "elll",
+    "path_tpl": "./httpdocs/local/templates/main",
+    "path_css": "./httpdocs/local/templates/main/template_styles.css",
+    "path_js": "./httpdocs/local/templates/main/script.js",
+    "path_img": "./images/",
+    "bower_ran": true,
+    "src_js":[
+        "src/js/config.js",
+        "src/bower_components/jquery/dist/jquery.js",
+        "src/bower_components/bootstrap/dist/js/bootstrap.js",
+        "src/bower_components/slick-carousel/slick/slick.js",
+        "src/bower_components/SelectOrDie/_src/selectordie.js",
+        "src/bower_components/jquery-validation/dist/jquery.validate.js",
+        "src/bower_components/moment/min/moment.min.js",
+        "src/bower_components/fullcalendar/dist/fullcalendar.min.js",
+        "src/bower_components/fullcalendar/dist/locale-all.js",
+        "src/js/modules/jquery-ui.min.js",
+        "src/bower_components/chosen/chosen.jquery.js",
+        "src/js/modules/*.js",
+        "src/js/controllers/*.js",
+        "src/bower_components/perfect_scroll/perfect-scrollbar.jquery.js",
+        "src/js/script.js"
+    ]
+}

@@ -1,0 +1,263 @@
+
+extends includes/layout
+
+block title
+    title Профиль
+
+block content
+    .main-container.search-container
+
+        .search__wrapper_top
+            .page-title
+                h1 Личный кабинет
+                a(href='javascript:;').page-title-link.j-page-title-link Личный кабинет
+                    .icon-wrapper
+                        +icon("triangle",10,10)
+
+        .search__wrapper_content
+            aside.search-aside.search-aside_personal
+                form.search-form
+                    ul.search-form-list
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Предложения
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='personal-customer__offers-active.html') Активные (1)
+                                    li
+                                        a(href='personal-customer__offers-expired.html') Просроченные
+                                    li
+                                        a(href='personal-customer__offers-refused.html') Получен отказ
+                                    li
+                                        a(href='personal-customer__offers-cancelled.html') Отмененные
+
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Мои перевозки
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='personal-customer__transportation-all.html') Все
+                                    li
+                                        a(href='personal-customer__transportation-accepted.html') Принятые
+                                    li
+                                        a(href='personal-customer__transportation-embarked.html') Погруженные
+                                    li
+                                        a(href='personal-customer__transportation-delivered.html') Доставленные
+                                    li
+                                        a(href='personal-customer__transportation-cancelled.html') Отмененные
+                                    li
+                                        a(href='personal-customer__transportation-archived.html') В архиве
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link.j-find-request Найти заявки
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='cargo-search.html') Найти груз
+                                    li
+                                        a(href='personal-customer__followed-requests.html') Отслеживаемые
+
+                        li.search-form__item
+                            a(href='personal-customer__calendar.html').search-form__link Календарь
+
+                        li.search-form__item
+                            a(href='personal-customer__following-cargo.html').search-form__link Попутный груз
+
+                        li.search-form__item
+                            a(href='personal-customer__profile.html').search-form__link Профиль
+
+                        li.search-form__item
+                            a(href='personal-customer__transaction-history.html').search-form__link История транзакций
+
+                        li.search-form__item
+                            a(href='personal-customer__balance.html').search-form__link Баланс
+
+                        li.search-form__item
+                            a(href='personal-customer__messages.html').search-form__link Сообщения
+
+                        li.search-form__item
+                            a(href='personal-customer__news.html').search-form__link Лента
+
+
+            .search-content.search-content_profile
+                .personal__content-list
+                    .title Профиль
+                    ul.item-block__list
+                        li
+                            .name Иванов Иван
+                            .progressbar-wrapper
+                                .progressbar
+                                span.progressbar-span Профиль заполнен на 70%
+                            .edit-options-wrapper
+                                a(href='#').edit-link Редактировать
+                                    +icon('edit',15,15)
+                                label.download-photo-link Загрузить фото
+                                    +icon('camera',20,20)
+                                    input(type='file' accept="image/jpeg,image/png")
+                        li
+                            p.first-p Информация о пользователе:
+                            span Зарегистрирован
+                            span 11.11.2015
+                        li
+                            p.first-p Заказов:
+                            p Активных (3)
+                            span Последний
+                            span 07.07.2016
+                        li
+                            p.first-p Отзывы:
+                            p Положительных (3)
+                            p Отрицательных (2)
+                        li.ref-item
+                            .references-buttons
+                                .wrap.j-ref-link.active
+                                    a(href='javascript:;') Положительные
+                                .wrap.j-ref-link
+                                    a(href='javascript:;') Отрицательные
+                                .wrap.j-ref-link
+                                    a(href='javascript:;') Отзывы пользователя
+                            ul.item-block__list.j-good-ref-list
+                                li
+                                    .ferryman-info
+                                        .ferryman__img
+                                            img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                        .ferryman__about
+                                            a(href='#').ferryman__profile-link
+                                                p Алексеев Алексей
+                                            ul.ferryman__starslist
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    .ferryman-ref
+                                        P Заказ:
+                                            span Перевозка мебели
+                                        p.ref Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика! Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                                li
+                                    .ferryman-info
+                                        .ferryman__img
+                                            img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                        .ferryman__about
+                                            a(href='#').ferryman__profile-link
+                                                p Алексеев Алексей
+                                            ul.ferryman__starslist
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    .ferryman-ref
+                                        P Заказ:
+                                            span Срочно перевезти мясную продукцию
+                                        p.ref Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                                a(href='#').more-ferrymen-link Показать еще
+                            ul.item-block__list.j-bad-ref-list
+                                li
+                                    .ferryman-info
+                                        .ferryman__img
+                                            img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                        .ferryman__about
+                                            a(href='#').ferryman__profile-link
+                                                p Алексеев Алексей
+                                            ul.ferryman__starslist
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    .ferryman-ref
+                                        P Заказ:
+                                            span Перевозка мебели
+                                        p.ref Все плохо.
+                                a(href='#').more-ferrymen-link Показать еще
+
+                            ul.item-block__list.j-all-ref-list
+                                li
+                                    .ferryman-info
+                                        .ferryman__img
+                                            img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                        .ferryman__about
+                                            a(href='#').ferryman__profile-link
+                                                p Алексеев Алексей
+                                            ul.ferryman__starslist
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    .ferryman-ref
+                                        P Заказ:
+                                            span Перевозка мебели
+                                        p.ref Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика! Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                                li
+                                    .ferryman-info
+                                        .ferryman__img
+                                            img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                        .ferryman__about
+                                            a(href='#').ferryman__profile-link
+                                                p Алексеев Алексей
+                                            ul.ferryman__starslist
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    .ferryman-ref
+                                        P Заказ:
+                                            span Срочно перевезти мясную продукцию
+                                        p.ref Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+                                li
+                                    .ferryman-info
+                                        .ferryman__img
+                                            img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                        .ferryman__about
+                                            a(href='#').ferryman__profile-link
+                                                p Алексеев Алексей
+                                            ul.ferryman__starslist
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                                li
+                                                    img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    .ferryman-ref
+                                        P Заказ:
+                                            span Перевозка мебели
+                                        p.ref Все плохо.
+                                a(href='#').more-ferrymen-link Показать еще
+
+
+

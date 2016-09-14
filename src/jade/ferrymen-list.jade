@@ -1,0 +1,250 @@
+extends includes/layout
+
+block title
+    title Список перевозчика
+
+block content
+    .main-container.search-container
+
+        .search__wrapper_top
+            .page-title
+                h1 Список перевозчиков
+                a(href='javascript:;').page-title-link.j-page-title-link Список перевозчиков
+                    .icon-wrapper
+                        +icon("triangle",10,10)
+
+        .search__wrapper_content.ferrymen
+            aside.search-aside
+                form.search-form
+                    ul.search-form-list
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Населенный пункт
+                                +icon("triangle",10,10)
+                            .search-form__inner.j-inner-list
+                                input(type='text' placeholder='Введите место').ferrymen-list__place-input
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Вид транспорта
+                                +icon("triangle",10,10)
+                            .search-form__inner.j-inner-list
+                                .sort-by
+                                    select
+                                        option Грузовик
+                                        option Закрытый транспорт
+                                        option Еще что-то
+
+                    .search-form__buttons
+                        button(type='submit').show-results Показать
+                        button(type='reset').reset-button Сбросить
+
+            .search-content
+                .item-block__left.ferrymen-block
+                    ul.item-block__list
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='ferryman-profile.html').ferryman__profile-link
+                                        p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p Зарегистрирован: 11.11.2015
+                                P Отзывов: 27
+                            .ferryman-book
+                                a(href='#').j-ferryman-book-link Заказать перевозку
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='ferryman-profile.html').ferryman__profile-link
+                                        p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p Зарегистрирован: 11.11.2015
+                                P Отзывов: 27
+                            .ferryman-book
+                                a(href='#').j-ferryman-book-link Заказать перевозку
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='ferryman-profile.html').ferryman__profile-link
+                                    p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p Зарегистрирован: 11.11.2015
+                                P Отзывов: 27
+                            .ferryman-book
+                                a(href='#').j-ferryman-book-link Заказать перевозку
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='ferryman-profile.html').ferryman__profile-link
+                                    p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p Зарегистрирован: 11.11.2015
+                                P Отзывов: 27
+                            .ferryman-book
+                                a(href='#').j-ferryman-book-link Заказать перевозку
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='ferryman-profile.html').ferryman__profile-link
+                                    p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p Зарегистрирован: 11.11.2015
+                                P Отзывов: 27
+                            .ferryman-book
+                                a(href='#').j-ferryman-book-link Заказать перевозку
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='ferryman-profile.html').ferryman__profile-link
+                                    p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p Зарегистрирован: 11.11.2015
+                                P Отзывов: 27
+                            .ferryman-book
+                                a(href='#').j-ferryman-book-link Заказать перевозку
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='ferryman-profile.html').ferryman__profile-link
+                                    p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p Зарегистрирован: 11.11.2015
+                                P Отзывов: 27
+                            .ferryman-book
+                                a(href='#').j-ferryman-book-link Заказать перевозку
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='ferryman-profile.html').ferryman__profile-link
+                                    p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p Зарегистрирован: 11.11.2015
+                                P Отзывов: 27
+                            .ferryman-book
+                                a(href='#').j-ferryman-book-link Заказать перевозку
+                        li
+                            .ferryman-info
+                                .ferryman__img
+                                    img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                                .ferryman__about
+                                    a(href='ferryman-profile.html').ferryman__profile-link
+                                    p Алексеев Алексей
+                                    ul.ferryman__starslist
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                        li
+                                            img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                            .ferryman__other-info
+                                p Зарегистрирован: 11.11.2015
+                                P Отзывов: 27
+                            .ferryman-book
+                                a(href='#').j-ferryman-book-link Заказать перевозку
+
+                    a(href='#').more-ferrymen-link Показать еще

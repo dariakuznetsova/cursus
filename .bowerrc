@@ -1,0 +1,9 @@
+{
+  "directory": "src/bower_components/",
+  "analytics": false,
+  "timeout": 120000,
+  "color": true,
+  "scripts": {
+    "postinstall": "echo \"Don't forget to include new components in less and script in config\""
+  }
+}

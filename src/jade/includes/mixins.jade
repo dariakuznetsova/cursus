@@ -1,0 +1,17 @@
+mixin menu(menu)
+    if typeof menu != "undefined"
+        ul&attributes(attributes)
+            each item in menu
+                li: a(href=item.href) #{item.name}
+                    if item.items
+                        ul
+                            each sub in item.items
+                                li: a(href=sub.href) #{sub.name}
+    else
+        | menu undefined
+
+mixin icon(icon,w,h)
+    - w = typeof w != "undefined" ? w : 18
+    - h = typeof h != "undefined" ? h : 18
+    svg(width=w, height=h)
+        use(xlink:href='#'+icon)

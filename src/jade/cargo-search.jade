@@ -1,0 +1,457 @@
+extends includes/layout
+
+block title
+    title Найти груз
+
+block content
+    .main-container.search-container
+
+        .search__wrapper_top
+            .page-title
+                h1 Поиск груза
+                a(href='javascript:;').page-title-link.j-page-title-link Поиск груза
+                    .icon-wrapper
+                        +icon("triangle",10,10)
+            .cargo-search__filters
+                a(href='top.html').show-top Показать топ
+                a(href='javascript:;').show-map.j-show-map Открыть карту
+                    +icon("triangle",10,10)
+                .registration__step.sort-by
+                    select(data-placeholder-option="true")
+                        option(value='null') Сортировать по:
+                        option По популярности
+                        option По цене
+
+        .search__wrapper_content
+            aside.search-aside
+                form.search-form#cargo-search-form
+                    ul.search-form-list
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Категории товаров
+                                +icon("triangle",10,10)
+                            .search-form__inner.j-inner-list
+                                label
+                                    +icon("triangle",10,10)
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Материалы
+                                    .inner_inputs.j-inner_inputs
+                                        label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Материал1
+                                        label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Материал2
+                                        label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Материал3
+                                label
+                                    +icon("triangle",10,10)
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Мебель
+                                    .inner_inputs.j-inner_inputs
+                                        label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Кровати
+                                        label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Диваны
+                                        label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Комоды
+                                label
+                                    +icon("triangle",10,10)
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Транспорт
+                                    .inner_inputs.j-inner_inputs
+                                        label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Грузовик
+                                        label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Легковой автомобиль
+                                        label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Корабль
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Место отправки
+                                +icon("triangle",10,10)
+                            .search-form__inner.j-inner-list
+                                input(type='text' placeholder='Введите место').search-form__input
+                                .wrap-for-counter
+                                    p Приемлемое расстояние
+                                    .search__counter-wrapper
+                                        input(type='text' value='1').search-form__input-counter
+                                        a(href='javascript:;').less
+                                            +icon("triangle",7,7)
+                                        a(href='javascript:;').more
+                                            +icon("triangle",7,7)
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Место доставки
+                                +icon("triangle",10,10)
+                            .search-form__inner.j-inner-list
+                                input(type='text' placeholder='Введите место').search-form__input
+                                .wrap-for-counter
+                                    p Приемлемое расстояние
+                                    .search__counter-wrapper
+                                        input(type='text' value='1').search-form__input-counter
+                                        a(href='javascript:;').less
+                                            +icon("triangle",7,7)
+                                        a(href='javascript:;').more
+                                            +icon("triangle",7,7)
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Цена
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_modify.j-inner-list
+                                .price-ui-slider
+                                    input(type='text' id='from' value='0')
+                                    input(type='text' id='to' value='100 000')
+                                    .slider-range
+                                label
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Фиксированная цена
+                                label
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Аукцион
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Транспорт перевозчика
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_modify.j-inner-list
+                                label
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Грузовик
+                                label
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Фургон
+                                label
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Легковая
+                                label.label__search-others
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Искать срочные перевозки
+
+                    .search-form__buttons
+                        button(type='submit').show-results Показать
+                        button(type='reset').reset-button Сбросить
+
+            .search-content
+                svg(version='1.1' xmlns='http://www.w3.org/2000/svg').map-svg-filter
+                    fliter(type='desaturate')#grayscale
+                        feColorMatrix(type='matrix' values='0.343 0.669 0.119 0 0 0.249 0.626 0.130 0 0 0.172 0.334 0.111 0 0 0     0     0     1 0')
+
+                .map
+                    iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15990.794843219408!2d30.352946349999996!3d59.93464185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1472128314149" width='100%' height='300px' frameborder="0" style="border:0" allowfullscreen)
+
+                .table-wrap
+                    table.search-content__table.search__table_top
+                        tr
+                            td.cargo Груз
+                            td.price Цена
+                            td.send Отправка
+                            td.recieve Доставка
+                            td.distance Расстояние
+                            td.time Время публикации
+                    table.search-content__table.search__table_main
+                        tr
+                            td.cargo
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            a(href='item.html').td-info__link
+                                                p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p Текстиль
+                                            p 30 кг
+                            td.price 15 000 руб.
+                            td.send
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Москва,
+                                                br
+                                                | ул. Гагарина, д.9
+                                        .td-info__text
+                                            p 22.06.2016
+                                            p 12:00
+
+                            td.recieve
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Днепропетровск,
+                                                br
+                                                | ул. Краснознаменная, д.10
+                                        .td-info__text
+                                            p 26.06.2016
+                                            p 22:00
+                            td.distance 1200 км
+                            td.time 30 мин. назад
+                        tr
+                            td.cargo
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            a(href='item.html').td-info__link
+                                                p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p Текстиль
+                                            p 30 кг
+                            td.price 15 000 руб.
+                            td.send
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Москва,
+                                                br
+                                                | ул. Гагарина, д.9
+                                        .td-info__text
+                                            p 22.06.2016
+                                            p 12:00
+
+                            td.recieve
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Днепропетровск,
+                                                br
+                                                | ул. Краснознаменная, д.10
+                                        .td-info__text
+                                            p 26.06.2016
+                                            p 22:00
+                            td.distance 1200 км
+                            td.time 30 мин. назад
+                        tr
+                            td.cargo
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            a(href='item.html').td-info__link
+                                                p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p Текстиль
+                                            p 30 кг
+                            td.price 15 000 руб.
+                            td.send
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Москва,
+                                                br
+                                                | ул. Гагарина, д.9
+                                        .td-info__text
+                                            p 22.06.2016
+                                            p 12:00
+
+                            td.recieve
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Днепропетровск,
+                                                br
+                                                | ул. Краснознаменная, д.10
+                                        .td-info__text
+                                            p 26.06.2016
+                                            p 22:00
+                            td.distance 1200 км
+                            td.time 30 мин. назад
+                        tr
+                            td.cargo
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            a(href='item.html').td-info__link
+                                                p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p Текстиль
+                                            p 30 кг
+                            td.price 15 000 руб.
+                            td.send
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Москва,
+                                                br
+                                                | ул. Гагарина, д.9
+                                        .td-info__text
+                                            p 22.06.2016
+                                            p 12:00
+
+                            td.recieve
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Днепропетровск,
+                                                br
+                                                | ул. Краснознаменная, д.10
+                                        .td-info__text
+                                            p 26.06.2016
+                                            p 22:00
+                            td.distance 1200 км
+                            td.time 30 мин. назад
+                        tr
+                            td.cargo
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            a(href='item.html').td-info__link
+                                                p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p Текстиль
+                                            p 30 кг
+                            td.price 15 000 руб.
+                            td.send
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Москва,
+                                                br
+                                                | ул. Гагарина, д.9
+                                        .td-info__text
+                                            p 22.06.2016
+                                            p 12:00
+
+                            td.recieve
+                                .td-wrapper
+                                    .td-info
+                                        .td-info__title
+                                            p г. Днепропетровск,
+                                                br
+                                                | ул. Краснознаменная, д.10
+                                        .td-info__text
+                                            p 26.06.2016
+                                            p 22:00
+                            td.distance 1200 км
+                            td.time 30 мин. назад
+
+                    .content__show-more-link.j-content-show-more-link
+                        a(href='javascript:;') Показать еще
+
+                .content-slider
+                    .content-slider__title Время заявки подходит к концу
+                    .content-slider__buttons
+                        a(href='javascript:;').content-slider__prev.j-link-prev
+                            +icon("caret",13,13)
+                        a(href='javascript:;').content-slider__next.j-link-next
+                            +icon("caret",13,13)
+                    .content-slider__gallery.j-content-slider
+                        .content-slider__item
+                            .content-slider__item-wrapper
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p.price 15 000 руб.
+                                            p.time Времени осталось:
+                                                br
+                                                span 1ч. 15 мин
+                        .content-slider__item
+                            .content-slider__item-wrapper
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p.price 15 000 руб.
+                                            p.time Времени осталось:
+                                                br
+                                                span 1ч. 15 мин
+                        .content-slider__item
+                            .content-slider__item-wrapper
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p.price 15 000 руб.
+                                            p.time Времени осталось:
+                                                br
+                                                span 1ч. 15 мин
+                        .content-slider__item
+                            .content-slider__item-wrapper
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p.price 15 000 руб.
+                                            p.time Времени осталось:
+                                                br
+                                                span 1ч. 15 мин
+                        .content-slider__item
+                            .content-slider__item-wrapper
+                                .td-wrapper
+                                    .td-img
+                                        img(src='../local/templates/main/img/korobka.jpg' alt='Фото груза')
+                                    .td-info.td-info_cargo
+                                        .td-info__title
+                                            p Коробки с одеждой, плюс манекены для магазина
+                                        .td-info__text
+                                            p.price 15 000 руб.
+                                            p.time Времени осталось:
+                                                br
+                                                span 1ч. 15 мин
+
+
+
+
+
+
+

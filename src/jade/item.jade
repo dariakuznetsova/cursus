@@ -1,0 +1,421 @@
+extends includes/layout
+
+block title
+    title Страница груза
+
+block content
+    .main-container.item
+
+        .item-block.item-block_first
+            .item__title
+                h1 Коробки с одеждой и манекены для магазина
+            .item__search-similar
+                a(href='#') Найти похожий груз
+                    +icon("loupe",15,15)
+
+        .item-block.item-block_second
+            .item-block__left
+                P 2 предложения / 5500 минимальное
+            .item-block__right
+                .item__upper-buttons
+                    a(href='#').item__follow-link.j-follow-link Следить
+                    a(href='#').item__ask-link.j-ask-link Задать вопрос
+                    a(href='#makeRate').item__rate-link.j-rate-link Сделать ставку
+
+        .item-block.item-block_third
+            .item-block__left
+                table.item-block__table
+                    tr
+                        td ID
+                        td 1232
+                    tr
+                        td Заказчик
+                        td Борисов Владислав
+                    tr
+                        td Добавлен
+                        td 12.04.16
+                    tr
+                        td Актуален до
+                        td 22.04.16
+                    tr
+                        td Бюджет
+                        td По предложению
+                    tr
+                        td Расстояние
+                        td 900 км
+
+
+            .item-block__right
+                .item-block__left
+                    .item-block__inner-title Точка отправления
+                    .item-block__inner-address Москва
+                        br
+                        | ул. Гагарина, д.9
+                    .item-block__inner-time
+                        +icon("watch",28,32)
+                        p 22.04.16
+                        p 13:00 МСК
+                .item-block__right
+                    .item-block__inner-title Точка назначения
+                    .item-block__inner-address Ижевск
+                        br
+                        | ул. Ленина, д.245
+                    .item-block__inner-time
+                        +icon("watch",28,32)
+                        p 29.04.16
+                        p 15:00 МСК
+
+        .item-block.item-block_fourth
+            .item-block__left.item-gallery
+                .item-gallery__small-pics
+                    .item-gallery__img
+                        img(src='../local/templates/main/img/korobka-big.jpg' alt='Фото груза')
+                    .item-gallery__img
+                        img(src='../local/templates/main/img/korobka-big01.jpg' alt='Фото груза')
+                .item-gallery__big-pic
+                    .item-gallery__img
+                        img(src='../local/templates/main/img/korobka-big.jpg' alt='Фото груза')
+            .item-block__right
+                .item-block__map
+                    svg(version='1.1' xmlns='http://www.w3.org/2000/svg').map-svg-filter
+                        fliter(type='desaturate')#grayscale
+                            feColorMatrix(type='matrix' values='0.343 0.669 0.119 0 0 0.249 0.626 0.130 0 0 0.172 0.334 0.111 0 0 0     0     0     1 0')
+                    .map
+                        iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15990.794843219408!2d30.352946349999996!3d59.93464185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1472128314149" width='100%' frameborder="0" style="border:0" allowfullscreen)
+
+        .item-block.item-block_fifth
+            .title_underline Информация о грузе
+            .item-block__brief Груз находится в Москве на складе сети магазинов одежды. Нужно перевезти груз в указанный срок целым и невредимым.
+            .item-block__tables
+                table.item__info-table
+                    tr
+                        th(colspan='2') Наименование №1
+                    tr
+                        td Длина:
+                        td 2м
+                    tr
+                        td Ширина:
+                        td 3м
+                    tr
+                        td Высота:
+                        td 1м
+                    tr
+                        td Вес:
+                        td 2кг
+                    tr
+                        td Количество:
+                        td 10
+                    tr
+                        td Условия:
+                        td С поддоном, Упаковано
+                    tr
+                        td Описание:
+                        td Одежда из хлопка, быстро мокнет.
+                table.item__info-table
+                    tr
+                        th(colspan='2') Наименование №1
+                    tr
+                        td Длина:
+                        td 2м
+                    tr
+                        td Ширина:
+                        td 3м
+                    tr
+                        td Высота:
+                        td 1м
+                    tr
+                        td Вес:
+                        td 2кг
+                    tr
+                        td Количество:
+                        td 10
+                    tr
+                        td Условия:
+                        td С поддоном, Упаковано
+                    tr
+                        td Описание:
+                        td Одежда из хлопка, быстро мокнет. Нужно аккуратно перевозить этот товар, он очень хрупкий.
+
+        .item-block.item-block_sixth
+            .item-block__left.ferrymen-block
+                .title_underline Предложения
+                ul.item-block__list
+                    li
+                        .ferryman-info
+                            .ferryman__img
+                                img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                            .ferryman__about
+                                p Алексеев Алексей
+                                ul.ferryman__starslist
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                        .ferryman-rate
+                            p 7000 руб
+                            a(href='javascript:;').know-more Подробнее
+                            include blocks/_ferryman-popup
+                    li
+                        .ferryman-info
+                            .ferryman__img
+                                img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                            .ferryman__about
+                                p Алексеев Алексей
+                                ul.ferryman__starslist
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                        .ferryman-rate
+                            p 7000 руб
+                            a(href='javascript:;').know-more Подробнее
+                            include blocks/_ferryman-popup
+                    li
+                        .ferryman-info
+                            .ferryman__img
+                                img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                            .ferryman__about
+                                p Алексеев Алексей
+                                ul.ferryman__starslist
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                                    li
+                                        img(src='../local/templates/main/img/star-border.svg' alt='звезда')
+                        .ferryman-rate
+                            p 7000 руб
+                            a(href='javascript:;').know-more Подробнее
+                            include blocks/_ferryman-popup
+                a(href='#').more-ferrymen-link Показать еще
+
+            .item-block__right
+                .title_underline Вопросы
+                ul.item-block__list
+                    li
+                        .item__question
+                            p Здравствуйте, можно узнать сколько будет стоить перевозка данного груза с учетом того, что я перевозил для вас несколько поставок ранее?
+                        .item__answer
+                            p 18.04.2016
+                            a(href='#').show-answer-link Показать ответ
+                    li
+                        .item__question
+                            p Здравствуйте, можно узнать сколько будет стоить перевозка данного груза с учетом того, что я перевозил для вас несколько поставок ранее?
+                        .item__answer
+                            p 18.04.2016
+                            a(href='#').show-answer-link Показать ответ
+                    li
+                        .item__question
+                            p Здравствуйте, можно узнать сколько будет стоить перевозка данного груза с учетом того, что я перевозил для вас несколько поставок ранее?
+                        .item__answer
+                            p 18.04.2016
+                            a(href='#').show-answer-link Показать ответ
+                a(href='#').more-ferrymen-link Показать еще
+                .item__ask-question
+                    .title_underline Задать вопрос
+                    form.ask-question-form
+                        textarea(type='text' placeholder='Ваш вопрос')
+                        label Запрещено указывать e-mail, телефон, другие контакты, ссылки
+                        button(type='submit') Отправить
+
+        .item-block.item-block_seventh#makeRate
+            form.rate-form#rateForm
+                .item-block__title Сделать ставку
+                .item-block
+                    .item-block__left.item-block_dark-bg
+                        .block-wrapper
+                            fieldset.item__rates
+                                label Стартовая
+                                .input-wrap
+                                    input(type='text' value='5000').price-input
+                                    input(type='text' value='11500')
+                            fieldset.item__rates
+                                label Минимальная
+                                .input-wrap
+                                    input(type='text' value='4000').price-input
+                                    input(type='text' value='9900')
+                            fieldset
+                                label
+                                    input(type='checkbox').checked_elem
+                                    .checkbox-fake
+                                        +icon('shape',11,11)
+                                    p Расcчитать полную стоимость, которую увидит заказчик
+                    .item-block__right.item-block_dark-bg
+                        .block-wrapper
+                            .min-rate Наименьшая ставка на данный момент:
+                                p 12 000 руб.
+
+                .item-block
+                    .item-block__left.item-block__left_lessHeight
+                        ul.search-form-list
+                            li.search-form__item
+                                a(href='javascript:;').search-form__link.j-search-form-link Услуги
+                                    +icon("triangle",10,10)
+                                .search-form__inner.search-form__inner1.j-inner-list
+                                    .block-wrapper
+                                        fieldset.item__rates
+                                            label Тип
+                                            .input-wrap
+                                                .sort-by
+                                                    select
+                                                        option Открытый транспорт
+                                                        option Закрытый транспорт
+                                                        option Еще что-то
+                                        fieldset.item__rates
+                                            label Способ
+                                            .input-wrap
+                                                .sort-by
+                                                    select(data-placeholder-option="true")
+                                                        option(value='null') Сортировать по
+                                                        option По популярности
+                                                        option По цене
+                                        fieldset.item__rates
+                                            label Транспорт
+                                            .input-wrap
+                                                .sort-by
+                                                    select(data-placeholder-option="true")
+                                                        option(value='null') Сортировать по
+                                                        option По популярности
+                                                        option По цене
+                                        fieldset
+                                            label.save-label
+                                                input(type='checkbox').checked_elem
+                                                .checkbox-fake
+                                                    +icon('shape',11,11)
+                                                p Сохранить
+
+                            li.search-form__item
+                                a(href='javascript:;').search-form__link.j-search-form-link Временные рамки
+                                    +icon("triangle",10,10)
+                                .search-form__inner.search-form__inner2.j-inner-list
+                                    .inner-list__wrapper
+                                        .inner-list__title Погрузка
+                                        .inner-list__wrap.j-inner-wrap
+                                            input(type='radio' name='radio1').checked_elem
+                                            .checkbox-fake
+                                                .circle
+                                            label В течение
+                                            input(type='text' name='days')
+                                            label дней после бронирования
+                                        .inner-list__wrap.j-inner-wrap
+                                            input(type='radio' name='radio1').checked_elem
+                                            .checkbox-fake
+                                                .circle
+                                            .sort-by
+                                                select(data-placeholder='Между')
+                                                    option 9.00 - 12.00
+                                                    option 12.00 - 15.00
+                                                    option 15.00 - 18.00
+                                                    option 18.00 - 21.00
+                                            input(type='text' name='timeFrom')
+                                            label и
+                                            input(type='text' name='timeTo')
+                                    .inner-list__wrapper
+                                        .inner-list__title Доставка
+                                        .inner-list__wrap.j-inner-wrap
+                                            input(type='radio' name='radio2').checked_elem
+                                            .checkbox-fake
+                                                .circle
+                                            label В течение
+                                            input(type='text' name='days')
+                                            label дней после бронирования
+                                        .inner-list__wrap.j-inner-wrap
+                                            input(type='radio' name='radio2').checked_elem
+                                            .checkbox-fake
+                                                .circle
+                                            .sort-by
+                                                select(data-placeholder='Между')
+                                                    option 9.00 - 12.00
+                                                    option 12.00 - 15.00
+                                                    option 15.00 - 18.00
+                                                    option 18.00 - 21.00
+                                            input(type='text' name='timeFrom')
+                                            label и
+                                            input(type='text' name='timeTo')
+
+                            li.search-form__item.search-form__item_button
+                                button(type='submit') Сделать ставку
+
+                    .item-block__right
+                        ul.search-form-list
+                            li.search-form__item
+                                a(href='javascript:;').search-form__link.j-search-form-link Сообщение для заказчика
+                                    +icon("triangle",10,10)
+                                .search-form__inner.j-inner-list.msg-for-customer.msg-for-customer1
+                                    .msg-for-customer__wrapper
+                                        textarea(type='text' placeholder='Введите сообщение')
+                                        p Запрещено указывать e-mail, телефон, другие контакты, ссылки
+
+                            li.search-form__item
+                                a(href='javascript:;').search-form__link.j-search-form-link Оплата
+                                    +icon("triangle",10,10)
+                                .search-form__inner.j-inner-list
+                                    .item__inner-block
+                                        label.inner-label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Наличные
+                                        label.inner-label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Безналичный расчет
+                                        label.inner-label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Банковская карта
+                                    .item__inner-block
+                                        label.inner-label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Перед погрузкой
+                                        label.inner-label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p При погрузке
+                                        label.inner-label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p При доставке
+                                    fieldset
+                                        label.save-label
+                                            input(type='checkbox').checked_elem
+                                            .checkbox-fake
+                                                +icon('shape',11,11)
+                                            p Сохранить
+
+                            li.search-form__item
+                                a(href='javascript:;').search-form__link.j-search-form-link Детали договора
+                                    +icon("triangle",10,10)
+                                .search-form__inner.j-inner-list.msg-for-customer.msg-for-customer2
+                                    .msg-for-customer__wrapper
+                                        textarea(type='text' placeholder='Введите сообщение')
+                                        p Запрещено указывать e-mail, телефон, другие контакты, ссылки
+                                        a(href='download/user.png' download).download-link Прикрепить шаблон договора
+                                            +icon('paper-clip',20,20)
+
+        .item-block.item-block_last
+            .last-block__title Важная информация
+            .last-block__info
+                p К услугам заказчиков перевозка грузов автомобильным транспортом, отправка грузов контейнерами, а также доставка грузов воздушным транспортом. При необходимости клиенты могут заказать мультимодальную транспортировку грузов, позволяющую совмещать грузоперевозки двумя и более видами транспорта. К услугам заказчиков перевозка грузов автомобильным транспортом, отправка грузов контейнерами, а также доставка грузов и прочих...

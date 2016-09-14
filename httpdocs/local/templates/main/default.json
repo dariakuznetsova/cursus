@@ -1,0 +1,111 @@
+{
+  "_comment":  "Тут можно сохранить данные которые потом будут использоваться в jade",
+  "__comment": "Имя файла должно совпадать с шаблоном в который мы это передаем",
+  "___comment":"default грузится в дополнение к остальным не найден с именем файла",
+  "mainmenu":
+  [
+    {
+      "name":"О компании",
+      "href":"/html/about.html"
+    },
+    {
+      "name":"Оборудование",
+      "href":"/html/catalog.html"
+    },
+    {
+      "name":"Порядки",
+      "href":"/html/standarts.html"
+    },
+    {
+      "name":"Контакты",
+      "href":"/html/contacts.html"
+    }
+  ],
+  "tel": "8 (800) 123-45-67",
+  "products": [
+    {
+      "pic":"http://lorempixel.com/300/300/technics",
+      "pic2":"http://placehold.it/150x233/e1ecf8/667590",
+      "name":"Lorem Ipsumamet loremipsum amet lorem ipsum",
+      "description":"lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet",
+      "price":"3000"
+    },
+    {
+      "pic":"http://lorempixel.com/100/300/technics",
+      "pic2":"http://placehold.it/450x233/e1ecf8/667590",
+      "name":"Ipsum Dolor amet lorem ipsum amet lorem ipsum",
+      "description":"lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet",
+      "price":"21000"
+    },
+    {
+      "pic":"http://lorempixel.com/400/100/technics",
+      "name":"Lorem",
+      "description":"lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet",
+      "price":"14000"
+    },
+    {
+      "pic":"http://lorempixel.com/100/100/technics",
+      "name":"Dolor Ipsum",
+      "description":"lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet lorem ipsum dolor amet",
+      "price":"16000"
+    }
+  ],
+  "menu_personal": [
+    {
+      "icon":"user",
+      "name":"Личный кабинет",
+      "href":"#"
+    },
+    {
+      "icon":"cart",
+      "name":"Корзина (34)",
+      "href":"#"
+    },
+    {
+      "icon":"user",
+      "name":"Личный кабинет",
+      "href":"#"
+    }
+  ],
+  "news": [
+    {
+      "pic":  "http://lorempixel.com/272/191/city/1",
+      "name": "Не уверены в качестве оборудования?",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+    },
+    {
+      "pic":  "http://lorempixel.com/272/191/city/2",
+      "name": "Не уверены в качестве оборудования?",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+    },
+    {
+      "pic":  "http://lorempixel.com/272/191/city/3",
+      "name": "Не уверены в качестве оборудования?",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+    }
+  ],
+  "events": [
+      {
+          "title"  : "",
+          "start"  : "2016-09-03",
+          "color": "#a8a6a6"
+      },
+      {
+          "title"  : "",
+          "start"  : "2016-09-30",
+          "color": "#7bdf87"
+
+      },
+      {
+          "title"  : "",
+          "start"  : "2016-09-20",
+          "color": "#f86060"
+
+      },
+      {
+          "title"  : "",
+          "start"  : "2016-09-11",
+          "color": "#fdf754"
+      }
+  ]
+}

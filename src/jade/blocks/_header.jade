@@ -1,0 +1,72 @@
+header
+    .main-container
+        ul.header-list
+            li.header__item.header__logo
+                a(href='index.html').header__logo-link
+                    img(src='../local/templates/main/img/logo.svg' alt='логотип')
+            li.header__item.header__order
+                a(href='request.html').header__order-link Разместить заявку
+                    +icon("new-message",21,21)
+            li.header__item.header__cargo-search
+                a(href='cargo-search.html').header__search-link Найти груз
+                    +icon("compass",21,21)
+            li.header__item.header__search.j-header__search
+                a(href='javascript:;').header__input-link.j-input-link
+                    +icon("loupe",22,22)
+                    span Поиск
+                input(type='text').header__search-input.j-header-input
+            li.header__item.header__user.j-header__user
+                .header__user-link_wrapper
+                    a(href='javascript:;').header__user-link.header__user_inactive.j-user_inactive
+                        +icon("user",21,21)
+                        span Профиль
+                    a(href='javascript:;').header__user-link.header__user_active.j-header__user_active
+                        img(src='../local/templates/main/img/user.png')
+                        span Профиль
+                form.header__login-form.j-login-form
+                    .login-form__title
+                        span Авторизация
+                    input(type='text' placeholder='Логин')
+                    input(type='text' placeholder='Пароль')
+                    button(type='submit') Войти
+                    .login-links
+                        a(href='registration-choose.html').registration-link Регистрация
+                        a(href='#').forget-password-link Забыли пароль?
+            li.header__item.header__hamburger-menu.j-hamburger-menu
+                .hamburger-menu
+                    a(href='javascript:;').hamburger-menu__link.j-hamburger-link
+                        +icon("menu",27,27)
+                        span Меню
+                        +icon("close",27,27)
+                ul.hamburger-menu-list
+                    li.hamburger-menu__item.hamburger-item_inner.j-hamburger-item_inner
+                        a(href='javascript:;').hamburger-menu__item-link О сервисе
+                            +icon("triangle",10,10)
+                        ul.hamburger__inner-menu
+                            li
+                                a(href='#') Опция 1
+                            li
+                                a(href='#') Опция 2
+                            li
+                                a(href='#') Опция 3
+                            li
+                                a(href='#') Опция 4
+                    li.hamburger-menu__item
+                        a(href='ferrymen-list.html').hamburger-menu__item-link Перевозчики
+                    li.hamburger-menu__item
+                        a(href='cargo-search.html').hamburger-menu__item-link Поиск груза
+                    li.hamburger-menu__item
+                        a(href='#').hamburger-menu__item-link Новости
+                    li.hamburger-menu__item.hamburger-item_inner.j-hamburger-item_inner
+                        a(href='#').hamburger-menu__item-link Контакты
+                            +icon("triangle",10,10)
+                        ul.hamburger__inner-menu
+                            li
+                                a(href='#') Опция 1
+                            li
+                                a(href='#') Опция 2
+                    li.hamburger-menu__item
+                        a(href='help.html').hamburger-menu__item-link Помощь
+
+
+

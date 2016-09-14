@@ -1,0 +1,36 @@
+extends includes/layout
+
+block title
+    title Отзывы и предложения
+
+block content
+    .main-container.help
+        h1 Как мы можем помочь?
+        form.help-form
+            input(type='text' name='helpInput' placeholder='Введите запрос')
+            button(type='submit') Написать в поддержку
+
+        .subtitle Часто задаваемые вопросы
+        ul.faq
+            li
+                a(href='#') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            li
+                a(href='#') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+            li
+                a(href='#') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+
+        ul.questions-category
+            li
+                a(href='#') Категория вопросов
+                .img
+                    img(src='../local/templates/main/img/bg.jpg')
+            li
+                a(href='#') Категория вопросов
+                .img
+                    img(src='../local/templates/main/img/bg.jpg')
+            li
+                a(href='#') Категория вопросов
+                .img
+                    img(src='../local/templates/main/img/bg.jpg')
+
+

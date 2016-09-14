@@ -1,0 +1,174 @@
+
+extends includes/layout
+
+block title
+    title Сообщения
+
+block content
+    .main-container.search-container
+
+        .search__wrapper_top
+            .page-title
+                h1 Личный кабинет
+                a(href='javascript:;').page-title-link.j-page-title-link Личный кабинет
+                    .icon-wrapper
+                        +icon("triangle",10,10)
+
+        .search__wrapper_content
+            aside.search-aside.search-aside_personal
+                form.search-form
+                    ul.search-form-list
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Предложения
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='personal-customer__offers-active.html') Активные (1)
+                                    li
+                                        a(href='personal-customer__offers-expired.html') Просроченные
+                                    li
+                                        a(href='personal-customer__offers-refused.html') Получен отказ
+                                    li
+                                        a(href='personal-customer__offers-cancelled.html') Отмененные
+
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Мои перевозки
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='personal-customer__transportation-all.html') Все
+                                    li
+                                        a(href='personal-customer__transportation-accepted.html') Принятые
+                                    li
+                                        a(href='personal-customer__transportation-embarked.html') Погруженные
+                                    li
+                                        a(href='personal-customer__transportation-delivered.html') Доставленные
+                                    li
+                                        a(href='personal-customer__transportation-cancelled.html') Отмененные
+                                    li
+                                        a(href='personal-customer__transportation-archived.html') В архиве
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link.j-find-request Найти заявки
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='cargo-search.html') Найти груз
+                                    li
+                                        a(href='personal-customer__followed-requests.html') Отслеживаемые
+
+                        li.search-form__item
+                            a(href='personal-customer__calendar.html').search-form__link Календарь
+
+                        li.search-form__item
+                            a(href='personal-customer__following-cargo.html').search-form__link Попутный груз
+
+                        li.search-form__item
+                            a(href='personal-customer__profile.html').search-form__link Профиль
+
+                        li.search-form__item
+                            a(href='personal-customer__transaction-history.html').search-form__link История транзакций
+
+                        li.search-form__item
+                            a(href='personal-customer__balance.html').search-form__link Баланс
+
+                        li.search-form__item
+                            a(href='personal-customer__messages.html').search-form__link Сообщения
+
+                        li.search-form__item
+                            a(href='personal-customer__news.html').search-form__link Лента
+
+
+            .search-content
+                .personal__content-list
+                    .title Мои сообщения
+                    form.personal__messages-form
+                        .select-wrapper
+                            .sort-by.messages__selects
+                                span Показать:
+                                select
+                                    option Все сообщения
+                                    option Непрочитанные
+                            .sort-by.messages__selects
+                                span Пометить как:
+                                select
+                                    option Прочитанные
+                                    option Непрочитанные
+                            .sort-by.messages__selects
+                                span Период:
+                                select
+                                    option Сегодня
+                                    option Неделя
+                                    option Месяц
+                                    option Все время
+                        table.personal__messages-table
+                            tr
+                                td.personal__messages-input
+                                    label
+                                        input(type='checkbox').check-all-input.checked_elem
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                td.personal__messages-text Сообщение
+                                td.personal__messages-sender Отправитель
+                                td.personal__messages-date Отправлено
+                            tr
+                                td.personal__messages-input
+                                    label
+                                        input(type='checkbox').checked_elem.message-input
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                td.personal__messages-text
+                                    a(href='#')
+                                        p Какой-то текст акой-то текст акой-то текст акой-то текстакой-то текстакой-то текстакой-то текстакой-то текст
+                                td.personal__messages-sender Иванов Иван
+                                td.personal__messages-date 22.04.2016
+                            tr
+                                td.personal__messages-input
+                                    label
+                                        input(type='checkbox').checked_elem.message-input
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                td.personal__messages-text
+                                    a(href='#')
+                                        p Какой-то текст акой-то текст акой-то текст акой-то текстакой-то текстакой-то текстакой-то текстакой-то текст
+                                td.personal__messages-sender Иванов Иван
+                                td.personal__messages-date 22.04.2016
+                            tr
+                                td.personal__messages-input
+                                    label
+                                        input(type='checkbox').checked_elem.message-input
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                td.personal__messages-text
+                                    a(href='#')
+                                        p Какой-то текст акой-то текст акой-то текст акой-то текстакой-то текстакой-то текстакой-то текстакой-то текст
+                                td.personal__messages-sender Иванов Иван
+                                td.personal__messages-date 22.04.2016
+                            tr
+                                td.personal__messages-input
+                                    label
+                                        input(type='checkbox').checked_elem.message-input
+                                        .checkbox-fake
+                                            +icon('shape',11,11)
+                                td.personal__messages-text
+                                    a(href='#')
+                                        p Какой-то текст акой-то текст акой-то текст акой-то текстакой-то текстакой-то текстакой-то текстакой-то текст
+                                td.personal__messages-sender Иванов Иван
+                                td.personal__messages-date 22.04.2016
+                        .personal__buttons-line
+                            .personal__delete
+                                a(href='#').delete-message-link Удалить
+                            .send-mail
+                                a(href='#').send-mail-link Отправить на e-mail
+                            .sort-by
+                                span Показать:
+                                select
+                                    option 10
+                                    option 20
+                                    option 30
+                                    option Все
+

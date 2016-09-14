@@ -1,0 +1,48 @@
+extends includes/layout
+
+block title
+    title Отзывы и предложения
+
+block content
+    .main-container.references
+        h1 Отзывы и предложения
+        .subtitle Написать отзыв/предложение
+
+        form.references-form
+            fieldset
+                p Тема
+                input(type='text' name='refTopic' placeholder='Введите тему')
+            fieldset
+                p Сообщение
+                textarea(name='refMessage' placeholder='Введите текст сообщения')
+            fieldset
+                button(type='submit') Отправить
+                .registration-links
+                    a(href='#').enter-link Войдите
+                    span или
+                    a(href='#').register-link зарегистрируйтесь
+
+        ul.references__list
+            li
+                .user
+                    .user__img
+                        img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                    .user__name
+                        a(href='#').ferryman__profile-link
+                            p Алексеев Алексей
+                .user-ref
+                    P.ref__title Тема отзыва
+                    p Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика! Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+            li
+                .user
+                    .user__img
+                        img(src='../local/templates/main/img/ferryman.jpg' alt='фото перевозчика')
+                    .user__name
+                        a(href='#').ferryman__profile-link
+                            p Алексеев Алексей
+                .user-ref
+                    P.ref__title Тема отзыва
+                    p Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика! Заказом доволен, все прошло отлично, деньги получил вовремя. Всем рекомендую этого заказчика!
+
+
+

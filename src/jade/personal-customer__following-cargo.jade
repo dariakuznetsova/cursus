@@ -1,0 +1,181 @@
+
+extends includes/layout
+
+block title
+    title Попутный груз
+
+block content
+    .main-container.search-container
+
+        .search__wrapper_top
+            .page-title
+                h1 Личный кабинет
+                a(href='javascript:;').page-title-link.j-page-title-link Личный кабинет
+                    .icon-wrapper
+                        +icon("triangle",10,10)
+
+        .search__wrapper_content
+            aside.search-aside.search-aside_personal
+                form.search-form
+                    ul.search-form-list
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Предложения
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='personal-customer__offers-active.html') Активные (1)
+                                    li
+                                        a(href='personal-customer__offers-expired.html') Просроченные
+                                    li
+                                        a(href='personal-customer__offers-refused.html') Получен отказ
+                                    li
+                                        a(href='personal-customer__offers-cancelled.html') Отмененные
+
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link Мои перевозки
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='personal-customer__transportation-all.html') Все
+                                    li
+                                        a(href='personal-customer__transportation-accepted.html') Принятые
+                                    li
+                                        a(href='personal-customer__transportation-embarked.html') Погруженные
+                                    li
+                                        a(href='personal-customer__transportation-delivered.html') Доставленные
+                                    li
+                                        a(href='personal-customer__transportation-cancelled.html') Отмененные
+                                    li
+                                        a(href='personal-customer__transportation-archived.html') В архиве
+
+                        li.search-form__item
+                            a(href='javascript:;').search-form__link.j-search-form-link.j-find-request Найти заявки
+                                +icon("triangle",10,10)
+                            .search-form__inner.search-form__inner_personal.j-inner-list
+                                ul
+                                    li
+                                        a(href='cargo-search.html') Найти груз
+                                    li
+                                        a(href='personal-customer__followed-requests.html') Отслеживаемые
+
+                        li.search-form__item
+                            a(href='personal-customer__calendar.html').search-form__link Календарь
+
+                        li.search-form__item
+                            a(href='personal-customer__following-cargo.html').search-form__link Попутный груз
+
+                        li.search-form__item
+                            a(href='personal-customer__profile.html').search-form__link Профиль
+
+                        li.search-form__item
+                            a(href='personal-customer__transaction-history.html').search-form__link История транзакций
+
+                        li.search-form__item
+                            a(href='personal-customer__balance.html').search-form__link Баланс
+
+                        li.search-form__item
+                            a(href='personal-customer__messages.html').search-form__link Сообщения
+
+                        li.search-form__item
+                            a(href='personal-customer__news.html').search-form__link Лента
+
+
+            .search-content
+                .personal__content-list
+                    .title Попутный груз
+                    svg(version='1.1' xmlns='http://www.w3.org/2000/svg').map-svg-filter
+                        fliter(type='desaturate')#grayscale
+                            feColorMatrix(type='matrix' values='0.343 0.669 0.119 0 0 0.249 0.626 0.130 0 0 0.172 0.334 0.111 0 0 0     0     0     1 0')
+                    .map
+                        iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15990.794843219408!2d30.352946349999996!3d59.93464185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1472128314149" width='100%' height='350px' frameborder="0" style="border:0" allowfullscreen)
+                    form.following-cargo__form#followingCargoForm
+                        fieldset
+                            p Найти погрузчика на участке
+                            fieldset.inner-fieldset
+                                span от
+                                input(type='text' name='searchPlaceFrom')
+                            fieldset.inner-fieldset
+                                span до
+                                input(type='text' name='searchPlaceTo')
+                        fieldset
+                            p По дате
+                            fieldset.inner-fieldset
+                                span от
+                                input(type='text' name='searchDateFrom')
+                            fieldset.inner-fieldset
+                                span до
+                                input(type='text' name='searchDateTo')
+                    ul.following-cargo__suggestions
+                        li
+                            .block1 Погрузчик
+                            .block2 Маршрут от
+                            .block3 до
+                        li
+                            .block1
+                                p.following-cargo__name Иван Иванов
+                                p Лодка
+                            .block2
+                                .place г.Киров, ул. Прозорова 23-123
+                                .time 21.09.2016
+                                    br
+                                    | 11:00
+                            .block3
+                                .place г.Москва, ул. Прозорова 231-123
+                                .time 21.09.2016
+                                    br
+                                    | 15:00
+                            .block4
+                                a(href='#') Обратиться с предложением о сотрудничестве
+                        li
+                            .block1
+                                p.following-cargo__name Иван Иванов
+                                p Лодка
+                            .block2
+                                .place г.Киров, ул. Прозорова 23-123
+                                .time 21.09.2016
+                                    br
+                                    | 11:00
+                            .block3
+                                .place г.Москва, ул. Прозорова 231-123
+                                .time 21.09.2016
+                                    br
+                                    | 15:00
+                            .block4
+                                a(href='#') Обратиться с предложением о сотрудничестве
+                        li
+                            .block1
+                                p.following-cargo__name Иван Иванов
+                                p Лодка
+                            .block2
+                                .place г.Киров, ул. Прозорова 23-123
+                                .time 21.09.2016
+                                    br
+                                    | 11:00
+                            .block3
+                                .place г.Москва, ул. Прозорова 231-123
+                                .time 21.09.2016
+                                    br
+                                    | 15:00
+                            .block4
+                                a(href='#') Обратиться с предложением о сотрудничестве
+                        li
+                            .block1
+                                p.following-cargo__name Иван Иванов
+                                p Лодка
+                            .block2
+                                .place г.Киров, ул. Прозорова 23-123
+                                .time 21.09.2016
+                                    br
+                                    | 11:00
+                            .block3
+                                .place г.Москва, ул. Прозорова 231-123
+                                .time 21.09.2016
+                                    br
+                                    | 15:00
+                            .block4
+                                a(href='#') Обратиться с предложением о сотрудничестве
+
+
